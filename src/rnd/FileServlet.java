@@ -20,12 +20,16 @@ public class FileServlet extends HttpServlet {
         String path = getPath(req);
         Optional<Resource> resource = Cache.getResource(path);
 
+        log("Got file get: " + path);
+
         if(resource.isPresent()) {
             OutputStream outputStream = resp.getOutputStream();
             resp.setContentType("application/octet-stream");
 
             try(FileInputStream inputStream = new FileInputStream(resource.get().getFile())) {
                 StreamUtils.copy(inputStream, outputStream);
+
+                log("File sent");
             } catch (IOException e) {
                 getServletContext().log(String.format("Error sending file '%s'", path), e);
 
@@ -33,6 +37,8 @@ public class FileServlet extends HttpServlet {
             }
         } else {
             resp.sendError(HttpServletResponse.SC_NOT_FOUND, path);
+
+            log("File does not exists");
         }
     }
 

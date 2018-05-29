@@ -21,6 +21,8 @@ public class VerifyServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/plain");
 
+        log("Got verify get");
+
         try(PrintWriter writer = resp.getWriter()) {
             writer.print(Cache.getLastModificationInstant().toString());
         }
@@ -30,6 +32,8 @@ public class VerifyServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String content = StreamUtils.toString(req.getInputStream());
 
+        log("Got verify post: " + content);
+
         try {
             List<ResourceInfo> clientCache = parseContent(content);
             List<ResourceInfo> updatedCache = processContent(clientCache);
@@ -37,11 +41,15 @@ public class VerifyServlet extends HttpServlet {
 
             resp.setContentType("application/json");
 
+            log("Responding with " + response);
+
             try (PrintWriter writer = resp.getWriter()) {
                 writer.print(response);
             }
         } catch (JSONException e) {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid JSON format: " + content);
+
+            log("Responding with error");
         }
     }
 
