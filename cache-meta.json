@@ -1,7 +1,41 @@
 {
-  "resources": [{
-    "file": "models/testmodel.json",
-    "checksum": "abe4f8336d1e5b72a278b21a3930fd04e2cc7577331e8f6ce70423d192c60d3d"
-  }],
-  "lastModified": "2018-05-29T22:44:12.622Z"
+  "resources": [
+    {
+      "file": "models/testmodel/4.json",
+      "checksum": "98ae173a546f7796c6601ef9f1a192b9cf502cb9e8a6c7e1c8c0a3104d107efe"
+    },
+    {
+      "file": "resources/images/4.jpg",
+      "checksum": "9e53bf0289fbe4e84b27f180d9f58ff4fbc8a4372be3ce9ac5aff4bace015d0e"
+    },
+    {
+      "file": "resources/images/3.jpg",
+      "checksum": "f630ad9da6815431981ad0491d3b6b8d367f593625f783f514693fed545f73c2"
+    },
+    {
+      "file": "resources/images/2.jpg",
+      "checksum": "7ee51fda63ac91e211f6854f02d9f702107380d550ed7a4535f4f63b3605033c"
+    },
+    {
+      "file": "models/testmodel/2.json",
+      "checksum": "c0ad58104b1839164b0b611485789381e434d954d5731d81acf1f413050ba631"
+    },
+    {
+      "file": "models/testmodel/list.json",
+      "checksum": "de5e0d0e3e1a1c8b87343f786dcc1a4e8844a3e100fa0d4dbde3ee93e3d43536"
+    },
+    {
+      "file": "models/testmodel/3.json",
+      "checksum": "26cf293c6315075e3d8ee9416da73d1c41a5341a457411109245de4a7f4cca91"
+    },
+    {
+      "file": "resources/images/1.jpg",
+      "checksum": "aa25323c1fc946b0d413264f63cfd05a69bc633378617840d05e727d2a926f4a"
+    },
+    {
+      "file": "models/testmodel/1.json",
+      "checksum": "e6cd46807075a1eb2d35e606c30b8d8c4dcfc553844b04c4079ac571f3e3394d"
+    }
+  ],
+  "lastModified": "2018-05-31T18:16:27.306Z"
 }

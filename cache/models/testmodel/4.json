@@ -1,0 +1,6 @@
+{
+  "int": 4,
+  "double": 3.14,
+  "string": "test model 4",
+  "bitmap": "resources/images/4.jpg"
+}

@@ -1,0 +1,8 @@
+{
+  "models":  [
+    "models/testmodel/1.json",
+    "models/testmodel/2.json",
+    "models/testmodel/3.json",
+    "models/testmodel/4.json"
+  ]
+}
