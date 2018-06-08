@@ -16,7 +16,7 @@ public class BookServlet extends HttpServlet {
 
         log("Got book post: " + content);
 
-        int bookingID = ThreadLocalRandom.current().nextInt();
+        int bookingID = ThreadLocalRandom.current().nextInt(0, Integer.MAX_VALUE);
         resp.setContentType("text/plain");
 
         try (PrintWriter writer = resp.getWriter()) {
