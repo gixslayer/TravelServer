@@ -13,6 +13,10 @@
         <servlet-name>Debug</servlet-name>
         <servlet-class>rnd.DebugServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Book</servlet-name>
+        <servlet-class>rnd.BookServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>File</servlet-name>
@@ -26,6 +30,10 @@
         <servlet-name>Debug</servlet-name>
         <url-pattern>/debug</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Book</servlet-name>
+        <url-pattern>/book</url-pattern>
+    </servlet-mapping>
     
     <listener>
         <listener-class>rnd.Cache</listener-class>
@@ -33,11 +41,11 @@
     
     <context-param>
         <param-name>cacheRoot</param-name>
-        <param-value>/home/s1010048/projects/idea/TravelServer/cache</param-value>
+        <param-value>/home/rnd/cache</param-value>
     </context-param>
     <context-param>
         <param-name>cacheMeta</param-name>
-        <param-value>/home/s1010048/projects/idea/TravelServer/cache-meta.json</param-value>
+        <param-value>/home/rnd/cache-meta.json</param-value>
     </context-param>
     <context-param>
         <param-name>digestAlgorithm</param-name>
