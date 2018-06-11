@@ -35,7 +35,10 @@ public class Cache implements ServletContextListener{
     }
 
     public static void forEach(Consumer<Resource> consumer) {
-        resources.values().forEach(consumer);
+        List<Resource> sorted = new ArrayList<>(resources.values());
+        sorted.sort(Comparator.comparing(Resource::getName));
+
+        sorted.forEach(consumer);
     }
 
     private static String toHex(byte[] hash) {
